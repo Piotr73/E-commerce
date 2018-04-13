@@ -1,0 +1,96 @@
+/**-----------------------------------CLASES PERSONALIZADAS NILTON---------------------------------------------------------*/
+
+
+
+ .aprobado{
+
+background-color: #E9FCFA;
+border: 1px dashed #006600;
+padding: 8px;
+margin-bottom: 10px;
+}
+
+.rechazado{
+
+background-color: #FFEDED;
+border: 1px dashed #FA206A;
+padding: 8px;
+margin-bottom: 10px;
+}
+
+.div_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #002640;
+  opacity: .80;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  filter: alpha(opacity=80);
+  z-index: 1040;
+}
+
+
+.div_contenido {
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 #222;
+  -webkit-box-shadow: 0 0 20px 0 #222;
+  -moz-box-shadow: 0 0 20px 0 #222;
+  display: none;
+  height: auto;
+  margin-left: 2%;
+  margin-right: 2%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  position: absolute;
+  top: 6%;
+  width: auto;
+  min-height: 90%;
+  z-index: 1050;
+}
+
+
+.box-gris{
+background-color:#ecf0f5 !important;
+}
+
+.box-white{
+background-color:#fff !important;
+}
+
+.form-group {
+ 
+  margin-bottom: 1px;
+}
+
+.form-control {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #b1cada;
+  margin-bottom: 5px;
+}
+
+.nav-tabs li.disabledTab{
+  pointer-events: none;
+}
+
+
+div#mensaje_usuario_edit,div#mensaje_usuario,div#mensaje_marca,div#mensaje_marca_edit,div#mensaje_categoria,#mensaje_categoria_edit{
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color:#fff;
+}
+
+div#mensaje_usuario_edit.exito,div#mensaje_usuario.exito,div#mensaje_marca.exito,div#mensaje_marca_edit.exito,div#mensaje_categoria.exito,div#mensaje_categoria_edit.exito,div#mensaje_pago.exito {
+  background: #3c8dbc;
+}
+
+div#mensaje_usuario_edit.error,div#mensaje_usuario.error,div#mensaje_marca.error,div#mensaje_marca_edit.error,div#mensaje_categoria.error,div#mensaje_categoria_edit.error,div#mensaje_pago.error {
+  background: #dd4b39 !important;
+}
+
