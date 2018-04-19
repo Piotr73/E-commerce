@@ -55,6 +55,14 @@
                     <li><a href="{{url('almacen/producto')}}">Productos</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-laptop'></i> <span>Panel</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{url('panel/msup')}}">Menú Sup</a></li>
+                    <li><a href="{{url('panel/slider')}}">Slider</a></li>
+                    <li><a href="{{url('panel/footer')}}">Footer</a></li>
+                </ul>
+            </li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

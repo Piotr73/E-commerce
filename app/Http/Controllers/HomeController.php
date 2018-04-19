@@ -22,10 +22,14 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+
+    /* Se está comentando esta funcion debido a que es constructora y necesita logeo para recién mandar al login*/
+    /*public function __construct()
     {
         $this->middleware('auth');
-    }
+    }*/
+
+    /*
 
     /**
      * Show the application dashboard.
@@ -35,8 +39,7 @@ class HomeController extends Controller
     public function index()
     {
         $categorias = DB::table('t_categoria as t')
-                  ->select('t.ID_Categoria','t.ID_General','ID_Nivel','ID_Nivel2','id_menu','Nombre')
-                  ->where('t.id_menu','=',1)
+                  ->select('t.ID_Categoria','t.ID_General','t.ID_Nivel','t.ID_Nivel2','t.id_menu','t.Nombre')
                   ->orderBy('t.ID_Categoria','asc')
                   ->get();
 

@@ -40,7 +40,13 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('store.login');
+        $categorias = DB::table('t_categoria as t')
+                  ->select('t.ID_Categoria','t.ID_General','ID_Nivel','ID_Nivel2','id_menu','Nombre')
+                  ->where('t.id_menu','=',1)
+                  ->orderBy('t.ID_Categoria','asc')
+                  ->get();
+
+        return view('store.login',["categorias"=>$categorias]);
     }
 
 }

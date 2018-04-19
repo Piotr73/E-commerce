@@ -12,6 +12,14 @@
 							<li><a href="signup.html">Registro</a></li> 
 							<li><a href="login.html">Mis Compras</a></li>  
 						</ul> 
+					</li>
+					<li class="dropdown head-dpdn">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> Mi Cuenta<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ url('/login') }}">Login</a></li> 
+							<li><a href="signup.html">Registro</a></li> 
+							<li><a href="login.html">Mis Compras</a></li>  
+						</ul> 
 					</li> 
 					<li class="dropdown head-dpdn">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-percent" aria-hidden="true"></i> Ofertas del Día<span class="caret"></span></a>
@@ -77,35 +85,29 @@
 						<nav class="cd-dropdown"> 
 							<a href="#0" class="cd-close">Close</a>
 							<ul class="cd-dropdown-content"> 
-								<!--<li><a href="offers.html">Today's Offers</a></li>-->
-								<li class="has-children">
 									@foreach($categorias as $cat)
-									<a href="#">{{$cat->Nombre}}</a> 
+										@if($cat->id_menu==1)
+										  <li class="has-children">
+											<a href="#">{{$cat->Nombre}}</a>
+												<ul class="cd-secondary-dropdown is-hidden">
+												@foreach($categorias as $ca)
+												  @if($ca->id_menu==2 && $cat->ID_Categoria==$ca->ID_General)
+													  <li class="has-children">
+														<a href="#">{{$ca->Nombre}}</a>
+														<ul>
+														  @foreach($categorias as $c)
+														  	@if($c->id_menu==3 && $cat->ID_Categoria==$c->ID_General && $ca->ID_Categoria==$c->ID_Nivel)
+														  		<li> <a href="products.html">{{$c->Nombre}}</a> </li>
+														  	@endif
+														  @endforeach
+													    </ul>
+													  </li>
+												  @endif
+												@endforeach
+												</ul>
+										  </li>
+										@endif
 									@endforeach
-									<!--<ul class="cd-secondary-dropdown is-hidden">
-										<li class="go-back"><a href="#">Menu</a></li>
-										<li class="see-all"><a href="products.html">All Electronics</a></li>
-										<li class="has-children">
-											<a href="#">Móviles</a>  
-											<ul class="is-hidden"> 
-												<li class="go-back"><a href="#">All Electronics</a></li> 
-												<li class="has-children">
-													<a href="#0">SmartPhones</a> 
-													<ul class="is-hidden"> 
-														<li class="go-back"><a href="#"> </a></li>
-														<li><a href="products.html">Android</a></li>
-														<li><a href="products.html">Windows</a></li>
-														<li><a href="products.html">Black berry</a></li>
-													</ul>
-												</li>
-												<li> <a href="products.html">IPhones</a> </li>
-												<li><a href="products.html">Tablets</a></li>
-												<li><a href="products.html">IPad</a></li>
-												<li><a href="products.html">Feature Phones</a></li> 
-											</ul>
-										</li> 
-									</ul>-->
-								</li> <!-- .has-children -->
 							</ul> <!-- .cd-dropdown-content -->
 						</nav> <!-- .cd-dropdown -->
 					</div> <!-- .cd-dropdown-wrapper -->	 
