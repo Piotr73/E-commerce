@@ -47,4 +47,11 @@ class HomeController extends Controller
         return view('welcome',["categorias"=>$categorias]);
         /*return view('home');*/
     }
+
+
+    public function prueba(Request $request){
+        $id = $request->get('id');
+        $data = 1;
+        return response()->json(['success'=>'true','id'=>$id,'update_count_message'=>$data,'new_count_message'=>$data]);
+    }
 }

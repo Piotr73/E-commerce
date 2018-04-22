@@ -14,14 +14,6 @@
 						</ul> 
 					</li>
 					<li class="dropdown head-dpdn">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> Mi Cuenta<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="{{ url('/login') }}">Login</a></li> 
-							<li><a href="signup.html">Registro</a></li> 
-							<li><a href="login.html">Mis Compras</a></li>  
-						</ul> 
-					</li> 
-					<li class="dropdown head-dpdn">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-percent" aria-hidden="true"></i> Ofertas del Día<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="offers.html">Descuentos por Producto</a></li>

@@ -79,6 +79,7 @@
 	<!-- menu js aim -->
 	<script src="{{asset('/js/plantilla/js/jquery.menu-aim.js')}}"> </script>
 	<script src="{{asset('/js/plantilla/js/main.js')}}"></script> <!-- Resource jQuery -->
+	<script src="{{asset('node_modules/socket.io-client/dist/socket.io.js')}}"></script>
 	<!-- //menu js aim --> 
 	<!-- Bootstrap core JavaScript
     ================================================== -->

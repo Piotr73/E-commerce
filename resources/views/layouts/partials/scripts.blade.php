@@ -17,6 +17,8 @@
 <script src="{{ asset('/js/plusis.js') }}" type="text/javascript"></script>
 <script src="{{asset('js/jquery-ui.min.js')}}"></script>
 <script src="https://adminlte.io/themes/AdminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="{{asset('node_modules/socket.io-client/dist/socket.io.js')}}"></script>
+<script src="{{asset('node_modules/push.js/bin/push.js')}}"></script>
 <script>
 
     var CargarPerfil = function(id) {
@@ -34,6 +36,26 @@
             return false;
         });
     }
+</script>
+<script type="text/javascript">
+    var socket = io.connect( 'http://'+window.location.hostname+':3000' );
+
+    socket.on( 'new_count_message', function( data ) {  
+      $( "#new_count_message" ).html( data.new_count_message );
+        Push.create("Hello world!", {
+        body: "How's it hangin'?",
+        icon: '/img/avatar.png',
+        timeout: 4000,
+        onClick: function () {
+            window.focus();
+            this.close();
+            }
+        });
+    });
+
+    socket.on( 'update_count_message', function( data ) {
+      $( "#new_count_message" ).html( data.update_count_message );
+    });
 </script>
 <script type="text/javascript" src="{{asset('/vendors/ckeditor/ckeditor.js')}}"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

@@ -14,6 +14,7 @@
 
 Route::get('/','HomeController@index');
 
+Route::post('/index','HomeController@prueba');
 /*Route::get('/', function () {
     return view('welcome');
 });*/
